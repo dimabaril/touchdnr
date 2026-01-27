@@ -1,15 +1,69 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
+import { LanguageSwitcher } from "@/components/LanguageSwitcher";
+import Image from "next/image";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
+const ptRootUi = localFont({
+  src: [
+    {
+      path: "./fonts/pt-root-ui_light.otf",
+      weight: "300",
+      style: "normal",
+    },
+    {
+      path: "./fonts/pt-root-ui_regular.otf",
+      weight: "400",
+      style: "normal",
+    },
+    {
+      path: "./fonts/pt-root-ui_medium.otf",
+      weight: "500",
+      style: "normal",
+    },
+    {
+      path: "./fonts/pt-root-ui_bold.otf",
+      weight: "700",
+      style: "normal",
+    },
+  ],
+  variable: "--font-pt-root",
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+const actay = localFont({
+  src: [
+    {
+      path: "./fonts/ActayCondensed-Thin.otf",
+      weight: "100",
+      style: "normal",
+    },
+    {
+      path: "./fonts/ActayCondensed-ThinItalic.otf",
+      weight: "100",
+      style: "italic",
+    },
+    {
+      path: "./fonts/Actay-Regular.otf",
+      weight: "400",
+      style: "normal",
+    },
+    {
+      path: "./fonts/Actay-RegularItalic.otf",
+      weight: "400",
+      style: "italic",
+    },
+    {
+      path: "./fonts/ActayWide-Bold.otf",
+      weight: "700",
+      style: "normal",
+    },
+    {
+      path: "./fonts/ActayWide-BoldItalic.otf",
+      weight: "700",
+      style: "italic",
+    },
+  ],
+  variable: "--font-actay",
 });
 
 export const metadata: Metadata = {
@@ -25,8 +79,21 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${ptRootUi.variable} ${actay.variable} antialiased relative`}
       >
+        <Image
+          src="/images/logo.png"
+          alt="logo"
+          width={84}
+          height={118}
+          className="absolute top-[53px] left-[75px]"
+          style={{
+            filter: "drop-shadow(0px 10px 14.9px rgba(0, 0, 0, 0.25))",
+          }}
+        />
+        <div className="absolute top-[59px] right-[51px]">
+          <LanguageSwitcher />
+        </div>
         {children}
       </body>
     </html>

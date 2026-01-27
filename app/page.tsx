@@ -1,65 +1,167 @@
+"use client";
+
 import Image from "next/image";
 
+import LiquidGlass from "liquid-glass-react";
+import { useRef, useState } from "react";
+import { MainButton } from "@/components/MainButton";
+
 export default function Home() {
+  // User Info Card Controls
+  const [displacementScale, setDisplacementScale] = useState(15);
+  const [blurAmount, setBlurAmount] = useState(0.01);
+  const [saturation, setSaturation] = useState(140);
+  const [aberrationIntensity, setAberrationIntensity] = useState(2);
+  const [elasticity, setElasticity] = useState(0);
+  const [cornerRadius, setCornerRadius] = useState(4);
+  const [userInfoOverLight, setUserInfoOverLight] = useState(false);
+  const [userInfoMode, setUserInfoMode] = useState<
+    "standard" | "polar" | "prominent" | "shader"
+  >("standard");
+
+  const containerRef = useRef<HTMLDivElement>(null);
+
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
+    <main className=" flex flex-col ">
+      <h1
+        className="bg-[#FFFFFF99] w-[475px] h-[141px] absolute top-[59px] left-[200px] rounded-[25px] p-[40px] shadow-[0px_13px_23.5px_0px_#00000026] font-actay font-bold text-[32px] text-[#8B8B8B] leading-[120%] tracking-normal"
+        style={{ textShadow: "0px 0px 23.2px #0000001A" }}
+      >
+        Донецкая Народная Республика
+      </h1>
+      <div className="absolute top-[236px] left-[200px]">
+        <h3 className="sr-only">Возрождаем Донбасс вместе!</h3>
+        <p className="sr-only">#ДОНБАССВМЕСТЕ</p>
+
         <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
+          className=" "
+          src="/images/main-vdv.png"
+          alt="slogan"
+          width={477}
+          height={147}
+          style={{
+            filter: "drop-shadow(0px 0px 14.9px rgba(0, 0, 0, 0.25))",
+          }}
         />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+      </div>
+      <Image
+        className="absolute z-10 top-[34px] left-[546px]"
+        src="/images/main-logo-dnr.png"
+        alt="Logo DNR"
+        width={828}
+        height={828}
+      />
+
+      <div
+        style={{
+          left: "1073px",
+          top: "554px",
+          padding: "25px 0px",
+          position: "relative",
+          width: "796px",
+          border: "1px solid",
+        }}
+      >
+        <LiquidGlass
+          padding="0"
+          displacementScale={displacementScale}
+          blurAmount={blurAmount}
+          saturation={saturation}
+          aberrationIntensity={aberrationIntensity}
+          elasticity={elasticity}
+          cornerRadius={cornerRadius}
+          mouseContainer={containerRef}
+          overLight={userInfoOverLight}
+          mode={userInfoMode}
+        >
+          <ul className="rounded-[20px] w-[576px] mx-auto font-sans font-medium text-[18px] text-white bg-[#9089854D] list-disc p-[30px_25px_40px_50px] leading-[150%] tracking-[0.54px] shadow-[0px_0px_23.2px_0px_#0000001A]">
+            <li>
+              Регион с богатой промышленной историей и мощным экономическим
+              потенциалом. Территория инноваций, передовых технологий и
+              перспективных инвестиционных возможностей.
+            </li>
+            <li>
+              Откройте для себя ключевые отрасли промышленности, познакомьтесь с
+              ведущими предприятиями региона и узнайте о возможностях для
+              развития бизнеса.
+            </li>
+          </ul>
+        </LiquidGlass>
+      </div>
+
+      {/* Navigation */}
+      <nav className="absolute w-[1446px]  bottom-[82px] flex justify-between  left-1/2  -translate-x-1/2 ">
+        <MainButton
+          href="/industry"
+          label={"Промышленность\nрегиона"}
+          icon="/images/icon-industry.svg"
+          variant="red"
+          width={57}
+          height={57}
+        />
+        <MainButton
+          href="/investors"
+          label="Для инвесторов"
+          icon="/images/icon-investors.svg"
+          variant="orange"
+          width={65}
+          height={57}
+        />
+        <MainButton
+          href="/info"
+          label="Информация про регион"
+          icon="/images/icon-info.svg"
+          variant="beige"
+          width={45}
+          height={59}
+        />
+      </nav>
+      {/* <LiquidGlass
+        displacementScale={displacementScale}
+        blurAmount={blurAmount}
+        saturation={saturation}
+        aberrationIntensity={aberrationIntensity}
+        elasticity={elasticity}
+        cornerRadius={cornerRadius}
+        mouseContainer={containerRef}
+        overLight={userInfoOverLight}
+        mode={userInfoMode}
+        style={{
+          position: "fixed",
+          top: "15%",
+          left: "43%",
+          zIndex: 20,
+        }}
+      >
+        <div className="w-72 text-shadow-lg">
+          <h3 className="text-xl font-semibold mb-4">User Info</h3>
+          <div className="space-y-3">
+            <div className="flex items-center space-x-3">
+              <div className="w-12 h-12 bg-black/10 backdrop-blur rounded-full flex items-center justify-center text-white font-semibold">
+                JD
+              </div>
+              <div>
+                <p className="font-medium">John Doe</p>
+                <p className="text-sm text-white">Software Engineer</p>
+              </div>
+            </div>
+            <div className="pt-2 space-y-2">
+              <div className="flex justify-between">
+                <span className="text-sm text-white">Email:</span>
+                <span className="text-sm">john.doe@example.com</span>
+              </div>
+              <div className="flex justify-between">
+                <span className="text-sm text-white">Location:</span>
+                <span className="text-sm">San Francisco, CA</span>
+              </div>
+              <div className="flex justify-between">
+                <span className="text-sm text-white">Joined:</span>
+                <span className="text-sm">March 2023</span>
+              </div>
+            </div>
+          </div>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
-    </div>
+      </LiquidGlass> */}
+    </main>
   );
 }

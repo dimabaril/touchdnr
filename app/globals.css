@@ -1,26 +1,58 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
+@theme {
+  --font-sans: var(--font-pt-root);
+  --font-actay: var(--font-actay);
   --font-mono: var(--font-geist-mono);
+
+  /* Custom Color Palette based on provided design */
+
+  /* Row 1: Gold / Beige Tones */
+  --color-gold-900: #bf9038; /* Darkest Gold */
+  --color-gold-700: #ccaa72;
+  --color-gold-500: #d6be99; /* Mid Gold */
+  --color-gold-300: #e5d6c0;
+  --color-gold-100: #f2eadd; /* Lightest Beige */
+
+  /* Row 2: Monochrome / Grey Tones */
+  --color-brand-black: #1a1a1a; /* Darkest */
+  --color-brand-grey-dark: #2e2e2e;
+  --color-brand-grey: #808080; /* Mid Grey */
+  --color-brand-grey-light: #d6d6d6;
+  --color-brand-white: #ffffff; /* Lightest */
+
+  /* Row 3: Red / Burgundy Tones */
+  --color-red-900: #4f1515; /* Darkest Burgundy */
+  --color-red-700: #751f1f;
+  --color-red-500: #a12b2b; /* Mid Red */
+  --color-red-300: #cc6060;
+  --color-red-100: #e8a8a8; /* Lightest Pink */
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background: #000000;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  width: 1920px;
+  height: 1080px;
+  margin: auto;
+  overflow: hidden;
+
+  background: url("/images/background.png") center / contain no-repeat;
+
+  font-family: var(--font-pt-root), sans-serif;
+}
+
+.glass-effect {
+  background: linear-gradient(
+    180deg,
+    #4e4e4e80 2%,
+    #85858580 40%,
+    #afafaf80 100%
+  );
 }
