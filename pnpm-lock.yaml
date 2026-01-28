@@ -8,6 +8,9 @@ importers:
 
   .:
     dependencies:
+      '@nkzw/liquid-glass':
+        specifier: ^1.3.0
+        version: 1.3.0(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
       liquid-glass-react:
         specifier: ^1.1.1
         version: 1.1.1(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
@@ -391,6 +394,12 @@ packages:
     engines: {node: '>= 10'}
     cpu: [x64]
     os: [win32]
+
+  '@nkzw/liquid-glass@1.3.0':
+    resolution: {integrity: sha512-c7lyHYCNSOUlurlxQP2M2XlXbmsXFBZxqVAduCyMzoQ8hE2BQyRNYk7hltFODQFdrrCDEfy73yE1JbZXljIe7g==}
+    peerDependencies:
+      react: '>=18'
+      react-dom: '>=18'
 
   '@nodelib/fs.scandir@2.1.5':
     resolution: {integrity: sha512-vq24Bq3ym5HEQm2NKCr3yXDwjc7vTsEThRDnkp2DK9p1uqLR+DHurm/NOTo0KG7HYHU7eppKZj3MyqYuMBf62g==}
@@ -2242,6 +2251,11 @@ snapshots:
 
   '@next/swc-win32-x64-msvc@16.1.4':
     optional: true
+
+  '@nkzw/liquid-glass@1.3.0(react-dom@19.2.3(react@19.2.3))(react@19.2.3)':
+    dependencies:
+      react: 19.2.3
+      react-dom: 19.2.3(react@19.2.3)
 
   '@nodelib/fs.scandir@2.1.5':
     dependencies:

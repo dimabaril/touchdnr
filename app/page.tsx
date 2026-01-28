@@ -1,28 +1,31 @@
-"use client";
+// "use client";
 
 import Image from "next/image";
 
-import LiquidGlass from "liquid-glass-react";
-import { useRef, useState } from "react";
+// import LiquidGlass from "@nkzw/liquid-glass";
+// import LiquidGlass from "liquid-glass-react";
+
+// import { useRef, useState } from "react";
 import { MainButton } from "@/components/MainButton";
 
 export default function Home() {
-  // User Info Card Controls
-  const [displacementScale, setDisplacementScale] = useState(15);
-  const [blurAmount, setBlurAmount] = useState(0.01);
-  const [saturation, setSaturation] = useState(140);
-  const [aberrationIntensity, setAberrationIntensity] = useState(2);
-  const [elasticity, setElasticity] = useState(0);
-  const [cornerRadius, setCornerRadius] = useState(4);
-  const [userInfoOverLight, setUserInfoOverLight] = useState(false);
-  const [userInfoMode, setUserInfoMode] = useState<
-    "standard" | "polar" | "prominent" | "shader"
-  >("standard");
+  // // User Info Card Controls
+  // const [displacementScale, setDisplacementScale] = useState(15);
+  // const [blurAmount, setBlurAmount] = useState(0.01);
+  // const [saturation, setSaturation] = useState(140);
+  // const [aberrationIntensity, setAberrationIntensity] = useState(2);
+  // const [elasticity, setElasticity] = useState(0);
+  // // const [borderRadius, setBorderRadius] = useState(4);
+  // // const [cornerRadius, setCornerRadius] = useState(4);
+  // const [userInfoOverLight, setUserInfoOverLight] = useState(false);
+  // const [userInfoMode, setUserInfoMode] = useState<
+  //   "standard" | "polar" | "prominent" | "shader"
+  // >("standard");
 
-  const containerRef = useRef<HTMLDivElement>(null);
+  // const containerRef = useRef<HTMLDivElement>(null);
 
   return (
-    <main className=" flex flex-col ">
+    <main className="flex flex-col">
       <h1
         className="bg-[#FFFFFF99] w-[475px] h-[141px] absolute top-[59px] left-[200px] rounded-[25px] p-[40px] shadow-[0px_13px_23.5px_0px_#00000026] font-actay font-bold text-[32px] text-[#8B8B8B] leading-[120%] tracking-normal"
         style={{ textShadow: "0px 0px 23.2px #0000001A" }}
@@ -57,36 +60,38 @@ export default function Home() {
           left: "1073px",
           top: "554px",
           padding: "25px 0px",
-          position: "relative",
+          position: "absolute",
           width: "796px",
           border: "1px solid",
+          borderRadius: "25px",
         }}
       >
-        <LiquidGlass
+        {/* <LiquidGlass
           padding="0"
           displacementScale={displacementScale}
           blurAmount={blurAmount}
           saturation={saturation}
           aberrationIntensity={aberrationIntensity}
           elasticity={elasticity}
-          cornerRadius={cornerRadius}
+          // borderRadius={borderRadius}
+          // cornerRadius={cornerRadius}
           mouseContainer={containerRef}
           overLight={userInfoOverLight}
           mode={userInfoMode}
-        >
-          <ul className="rounded-[20px] w-[576px] mx-auto font-sans font-medium text-[18px] text-white bg-[#9089854D] list-disc p-[30px_25px_40px_50px] leading-[150%] tracking-[0.54px] shadow-[0px_0px_23.2px_0px_#0000001A]">
-            <li>
-              Регион с богатой промышленной историей и мощным экономическим
-              потенциалом. Территория инноваций, передовых технологий и
-              перспективных инвестиционных возможностей.
-            </li>
-            <li>
-              Откройте для себя ключевые отрасли промышленности, познакомьтесь с
-              ведущими предприятиями региона и узнайте о возможностях для
-              развития бизнеса.
-            </li>
-          </ul>
-        </LiquidGlass>
+        > */}
+        <ul className="rounded-[20px] w-[576px] mx-auto font-sans font-medium text-[18px] text-white bg-[#90898580] list-disc p-[30px_25px_40px_50px] leading-[150%] tracking-[0.54px] shadow-[0px_0px_23.2px_0px_#0000001A]">
+          <li>
+            Регион с богатой промышленной историей и мощным экономическим
+            потенциалом. Территория инноваций, передовых технологий и
+            перспективных инвестиционных возможностей.
+          </li>
+          <li>
+            Откройте для себя ключевые отрасли промышленности, познакомьтесь с
+            ведущими предприятиями региона и узнайте о возможностях для развития
+            бизнеса.
+          </li>
+        </ul>
+        {/* </LiquidGlass> */}
       </div>
 
       {/* Navigation */}
