@@ -3,7 +3,7 @@
 export function LanguageSwitcher() {
   return (
     <div
-      className="flex w-[231px] h-[68px] p-[10px_10px_13px_13px] bg-[#8585854d] rounded-full items-center justify-between font-actay font-bold text-xl"
+      className="flex w-[213px] h-[62px] p-[8px_8px_10px_10px] bg-[#9D9D9D4D] rounded-full items-center justify-between font-actay font-bold text-[18px]"
       style={{
         border: "1px solid transparent",
         boxShadow: "1px -1px 0px 2px #FFFFFF63 inset",
@@ -13,7 +13,7 @@ export function LanguageSwitcher() {
       <button
         className="flex-1 h-full rounded-full bg-[#FFFFFF99] text-[#737373] "
         style={{
-          boxShadow: "inset 2px -2px 0px 1px #FFFFFF85 ",
+          boxShadow: "inset 2px -2px 0px 1px #FFFFFF80 ",
         }}
       >
         РУС

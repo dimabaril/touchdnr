@@ -3,6 +3,7 @@ import localFont from "next/font/local";
 import "./globals.css";
 import { LanguageSwitcher } from "@/components/LanguageSwitcher";
 import Image from "next/image";
+import Header from "@/components/Header";
 
 const ptRootUi = localFont({
   src: [
@@ -81,19 +82,7 @@ export default function RootLayout({
       <body
         className={`${ptRootUi.variable} ${actay.variable} antialiased relative`}
       >
-        <Image
-          src="/images/logo.png"
-          alt="logo"
-          width={84}
-          height={118}
-          className="absolute top-[53px] left-[75px]"
-          style={{
-            filter: "drop-shadow(0px 10px 14.9px rgba(0, 0, 0, 0.25))",
-          }}
-        />
-        <div className="absolute top-[59px] right-[51px]">
-          <LanguageSwitcher />
-        </div>
+        <Header />
         {children}
       </body>
     </html>
