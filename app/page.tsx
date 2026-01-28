@@ -51,11 +51,11 @@ export default function Home() {
 
       <div
         style={{
-          left: "1073px",
-          top: "554px",
+          right: "52px",
+          bottom: "246px",
           padding: "25px 0px",
           position: "absolute",
-          width: "796px",
+          width: "650px",
           border: "1px solid",
           borderRadius: "25px",
         }}
@@ -73,7 +73,7 @@ export default function Home() {
           overLight={userInfoOverLight}
           mode={userInfoMode}
         > */}
-        <ul className="rounded-[20px] w-[576px] mx-auto font-sans font-medium text-[18px] text-white bg-[#90898580] list-disc p-[30px_25px_40px_50px] leading-[150%] tracking-[0.54px] shadow-[0px_0px_23.2px_0px_#0000001A]">
+        <ul className="rounded-[20px] w-[430px] mx-auto font-sans font-medium text-[18px] text-white bg-[#90898580] list-disc p-[30px_25px_40px_50px] leading-[150%] tracking-[0.54px] shadow-[0px_0px_23.2px_0px_#0000001A]">
           <li>
             Регион с богатой промышленной историей и мощным экономическим
             потенциалом. Территория инноваций, передовых технологий и
