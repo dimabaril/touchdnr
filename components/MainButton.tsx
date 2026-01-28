@@ -25,6 +25,7 @@ export function MainButton({
           background: "#8585854D",
           border: "1px solid #D5D5D5",
           boxShadow: "0px 20px 26.1px 0px #00000040",
+          backdropFilter: "blur(2px)",
         }}
       >
         <div

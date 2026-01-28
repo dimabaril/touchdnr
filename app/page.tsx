@@ -28,7 +28,9 @@ export default function Home() {
     <main className="flex flex-col">
       <h1
         className="bg-[#FFFFFF99] w-[475px] h-[141px] absolute top-[59px] left-[200px] rounded-[25px] p-[40px] shadow-[0px_13px_23.5px_0px_#00000026] font-actay font-bold text-[32px] text-[#8B8B8B] leading-[120%] tracking-normal"
-        style={{ textShadow: "0px 0px 23.2px #0000001A" }}
+        style={{
+          textShadow: "0px 0px 23.2px #0000001A",
+        }}
       >
         Донецкая Народная Республика
       </h1>
