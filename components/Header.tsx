@@ -16,7 +16,7 @@ export default function Header() {
           }}
         />
         <h1
-          className="bg-[#ffffff80] h-[100px] flex items-center px-[40px] rounded-[25px] font-actay font-bold text-[28px] text-[#8B8B8B] leading-[120%] tracking-normal"
+          className="bg-[#ffffff80] border border-white/80 h-[100px] flex items-center px-[40px] rounded-[25px] font-actay font-bold text-[28px] text-[#8B8B8B] leading-[120%] tracking-normal"
           style={{
             boxShadow: "0px 13px 23.5px 0px #00000026",
             backdropFilter: "blur(4px)",
