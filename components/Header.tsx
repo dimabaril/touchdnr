@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { LanguageSwitcher } from "@/components/LanguageSwitcher";
+import { LanguageToggle } from "@/components/LanguageToggle";
 
 export default function Header() {
   return (
@@ -27,7 +27,7 @@ export default function Header() {
         </h1>
       </div>
       <div className="">
-        <LanguageSwitcher />
+        <LanguageToggle />
       </div>
     </header>
   );

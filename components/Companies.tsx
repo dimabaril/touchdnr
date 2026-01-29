@@ -6,8 +6,8 @@ const companies = [
   "ДОНМЕТЭКСПО, ООО",
   "ЕНАКИЕВСКИЙ МЕТАЛЛУРГИЧЕСКИЙ ЗАВОД",
   "ЗАВОД МЕТИЗНЫХ ИЗДЕЛИЙ, ООО",
-  "ЕНАКИЕВСКИЙ МЕТАЛЛУРГИЧЕСКИЙ ЗАВОД",
-  "ЗАВОД МЕТИЗНЫХ ИЗДЕЛИЙ, ООО",
+  "ЕНАКИЕВСКИЙ МЕТАЛЛУРГИЧЕСКИЙ ЗАВОД 2",
+  "ЗАВОД МЕТИЗНЫХ ИЗДЕЛИЙ, ООО 2",
 ];
 
 const companiesTitle = "КОМПАНИИ";
@@ -26,7 +26,7 @@ export default function Companies() {
       <h2
         className="absolute rotate-[90deg] origin-top-left translate-x-[422px] font-actay font-bold text-[80px] leading-[120%] tracking-[0.02em] text-[rgba(255,255,255,0.6)]"
         style={{
-          textShadow: "-10px 0px 19.8px rgba(0, 0, 0, 0.2)",
+          textShadow: "10px 0px 19.8px rgba(0, 0, 0, 0.2)",
         }}
       >
         {companiesTitle}

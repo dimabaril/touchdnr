@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
-import { LanguageSwitcher } from "@/components/LanguageSwitcher";
+import { LanguageToggle } from "@/components/LanguageToggle";
 import Image from "next/image";
 import Header from "@/components/Header";
 

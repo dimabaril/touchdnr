@@ -1,6 +1,6 @@
 "use client";
 
-export function LanguageSwitcher() {
+export function LanguageToggle() {
   return (
     <div
       className="flex w-[213px] h-[62px] p-[8px_8px_10px_10px] bg-[#9D9D9D4D] rounded-full items-center justify-between font-actay font-bold text-[18px]"
@@ -11,14 +11,14 @@ export function LanguageSwitcher() {
       }}
     >
       <button
-        className="flex-1 h-full rounded-full bg-[#FFFFFF99] text-[#737373] "
+        className="flex-1 h-full rounded-full bg-[#FFFFFF99] text-[#737373] leading-[45px]"
         style={{
-          boxShadow: "inset 2px -2px 0px 1px #FFFFFF80 ",
+          boxShadow: "2px -2px 0px 1px #FFFFFF80 inset",
         }}
       >
         РУС
       </button>
-      <button className="flex-1 h-full rounded-full text-brand-white">
+      <button className="flex-1 h-full rounded-full text-brand-white leading-[45px]">
         ENG
       </button>
     </div>
