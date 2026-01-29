@@ -9,12 +9,6 @@ export default function InfoPage() {
       <p className="font-sans text-[24px] text-[#8B8B8B] mb-12">
         Страница в разработке
       </p>
-      <Link
-        href="/"
-        className="font-sans text-[18px] text-white bg-[#9089854D] px-8 py-4 rounded-[20px] hover:bg-[#90898566] transition-colors"
-      >
-        ← Вернуться на главную
-      </Link>
     </main>
   );
 }

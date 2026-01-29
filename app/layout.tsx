@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
-import { LanguageToggle } from "@/components/LanguageToggle";
-import Image from "next/image";
 import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 
 const ptRootUi = localFont({
   src: [
@@ -84,6 +83,7 @@ export default function RootLayout({
       >
         <Header />
         {children}
+        <Footer />
       </body>
     </html>
   );
