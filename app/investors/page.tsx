@@ -1,12 +1,46 @@
+import StepCard, { StepCardProps } from "./StepCard";
+
+const steps: StepCardProps[] = [
+  {
+    image:
+      "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80",
+    imagePosition: "top",
+    label: "Официальное обращение",
+    text: "Официальное обращение в ГУП ДНР «КРД» посредством электронной почты: info@krdonbass.ru",
+    deadline: "Срок рассмотрения: 1 день",
+  },
+  {
+    image:
+      "https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=400&q=80",
+    imagePosition: "bottom",
+    label: "Регистрация заявки",
+    text: `Регистрация заявки в ГУП ДНР «КРД» \n -Проверка юр. лица заявителя \n -Рассмотрение инвестиционного проекта`,
+    deadline: "Срок рассмотрения: до 10 дней",
+  },
+  {
+    image:
+      "https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=400&q=80",
+    imagePosition: "top",
+    label: "Консультационная поддержка",
+    text: `Консультационная поддержка по финансовым, организационным и земельным вопросам \n -Личная встреча или ВКС для детализации проекта`,
+    deadline: "Срок рассмотрения: 1 день",
+  },
+  {
+    label:
+      "Определение порядка дальнейшего сопровождения / инвестиционной площадки",
+    deadline: "Срок рассмотрения: 7 дней",
+  },
+];
+
 export default function InvestorsPage() {
   return (
-    <main className="min-h-screen flex flex-col items-center justify-center">
-      <h1 className="font-actay font-bold text-[48px] text-[#8B8B8B] mb-8">
-        Для инвесторов
-      </h1>
-      <p className="font-sans text-[24px] text-[#8B8B8B] mb-12">
-        Страница в разработке
-      </p>
+    <main className="pt-[246px]">
+      {/* shadow-[0px_40px_67.6px_0px_#00000045] */}
+      <div className="h-[587px] flex gap-[25px]">
+        {steps.map((step, i) => (
+          <StepCard key={i} {...step} index={i} />
+        ))}
+      </div>
     </main>
   );
 }

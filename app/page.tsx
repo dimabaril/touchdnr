@@ -1,29 +1,8 @@
-// "use client";
-
 import Image from "next/image";
 
-// import LiquidGlass from "@nkzw/liquid-glass";
-// import LiquidGlass from "liquid-glass-react";
-
-// import { useRef, useState } from "react";
 import { MainButton } from "@/components/MainButton";
 
 export default function Home() {
-  // // User Info Card Controls
-  // const [displacementScale, setDisplacementScale] = useState(15);
-  // const [blurAmount, setBlurAmount] = useState(0.01);
-  // const [saturation, setSaturation] = useState(140);
-  // const [aberrationIntensity, setAberrationIntensity] = useState(2);
-  // const [elasticity, setElasticity] = useState(0);
-  // // const [borderRadius, setBorderRadius] = useState(4);
-  // // const [cornerRadius, setCornerRadius] = useState(4);
-  // const [userInfoOverLight, setUserInfoOverLight] = useState(false);
-  // const [userInfoMode, setUserInfoMode] = useState<
-  //   "standard" | "polar" | "prominent" | "shader"
-  // >("standard");
-
-  // const containerRef = useRef<HTMLDivElement>(null);
-
   return (
     <main className="flex flex-col">
       <div className="absolute top-[190px] left-[53px]">
@@ -51,30 +30,16 @@ export default function Home() {
 
       <div
         style={{
-          background: "rgba(157, 157, 157, 0.3)",
-          backdropFilter: "blur(2px)",
+          position: "absolute",
+          width: "650px",
           right: "52px",
           bottom: "246px",
           padding: "25px 0px",
-          position: "absolute",
-          width: "650px",
-          // border: "1px solid",
           borderRadius: "25px",
+          background: "rgba(157, 157, 157, 0.3)",
+          backdropFilter: "blur(2px)",
         }}
       >
-        {/* <LiquidGlass
-          padding="0"
-          displacementScale={displacementScale}
-          blurAmount={blurAmount}
-          saturation={saturation}
-          aberrationIntensity={aberrationIntensity}
-          elasticity={elasticity}
-          // borderRadius={borderRadius}
-          // cornerRadius={cornerRadius}
-          mouseContainer={containerRef}
-          overLight={userInfoOverLight}
-          mode={userInfoMode}
-        > */}
         <ul className="rounded-[20px] w-[430px] mx-auto font-sans font-medium text-[18px] text-white bg-[rgba(157,157,157,0.3)] list-disc p-[30px_25px_40px_50px] leading-[150%] tracking-[0.54px] [text-shadow:0px_0px_23.2px_#0000001A]">
           <li>
             Регион с богатой промышленной историей и мощным экономическим
@@ -87,7 +52,6 @@ export default function Home() {
             бизнеса.
           </li>
         </ul>
-        {/* </LiquidGlass> */}
       </div>
 
       {/* Navigation */}
@@ -117,52 +81,6 @@ export default function Home() {
           height={59}
         />
       </nav>
-      {/* <LiquidGlass
-        displacementScale={displacementScale}
-        blurAmount={blurAmount}
-        saturation={saturation}
-        aberrationIntensity={aberrationIntensity}
-        elasticity={elasticity}
-        cornerRadius={cornerRadius}
-        mouseContainer={containerRef}
-        overLight={userInfoOverLight}
-        mode={userInfoMode}
-        style={{
-          position: "fixed",
-          top: "15%",
-          left: "43%",
-          zIndex: 20,
-        }}
-      >
-        <div className="w-72 text-shadow-lg">
-          <h3 className="text-xl font-semibold mb-4">User Info</h3>
-          <div className="space-y-3">
-            <div className="flex items-center space-x-3">
-              <div className="w-12 h-12 bg-black/10 backdrop-blur rounded-full flex items-center justify-center text-white font-semibold">
-                JD
-              </div>
-              <div>
-                <p className="font-medium">John Doe</p>
-                <p className="text-sm text-white">Software Engineer</p>
-              </div>
-            </div>
-            <div className="pt-2 space-y-2">
-              <div className="flex justify-between">
-                <span className="text-sm text-white">Email:</span>
-                <span className="text-sm">john.doe@example.com</span>
-              </div>
-              <div className="flex justify-between">
-                <span className="text-sm text-white">Location:</span>
-                <span className="text-sm">San Francisco, CA</span>
-              </div>
-              <div className="flex justify-between">
-                <span className="text-sm text-white">Joined:</span>
-                <span className="text-sm">March 2023</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </LiquidGlass> */}
     </main>
   );
 }
