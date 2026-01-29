@@ -1,6 +1,10 @@
 "use client";
 
+import { useState } from "react";
+
 export function LanguageToggle() {
+  const [lang, setLang] = useState("RU");
+
   return (
     <div
       className="flex w-[213px] h-[62px] p-[8px_8px_10px_10px] bg-[#9D9D9D4D] rounded-full items-center justify-between font-actay font-bold text-[18px]"
@@ -11,14 +15,25 @@ export function LanguageToggle() {
       }}
     >
       <button
-        className="flex-1 h-full rounded-full bg-[#FFFFFF99] text-[#737373] leading-[45px]"
-        style={{
-          boxShadow: "2px -2px 0px 1px #FFFFFF80 inset",
-        }}
+        className={
+          "flex-1 h-full rounded-full leading-[45px] transition-colors " +
+          (lang === "RU"
+            ? "bg-[#FFFFFF99] text-[#737373] shadow-[2px_-2px_0px_1px_#FFFFFF80_inset]"
+            : "text-brand-white")
+        }
+        onClick={() => setLang("RU")}
       >
         РУС
       </button>
-      <button className="flex-1 h-full rounded-full text-brand-white leading-[45px]">
+      <button
+        className={
+          "flex-1 h-full rounded-full leading-[45px] transition-colors " +
+          (lang === "EN"
+            ? "bg-[#FFFFFF99] text-[#737373] shadow-[2px_-2px_0px_1px_#FFFFFF80_inset]"
+            : "text-brand-white")
+        }
+        onClick={() => setLang("EN")}
+      >
         ENG
       </button>
     </div>
