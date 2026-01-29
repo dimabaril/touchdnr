@@ -1,0 +1,31 @@
+.outer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 103px;
+  height: 103px;
+  border-radius: 25px;
+  background: #ffffff99;
+  box-shadow: 2px -2px 0px 1px #ffffff85 inset;
+}
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 74px;
+  height: 74px;
+  border-radius: 50%;
+  border: 1px solid #ffefbb;
+  background: radial-gradient(
+    69.31% 57.53% at 30.69% 60.4%,
+    rgba(210, 147, 88, 0.68) 49.32%,
+    rgba(237, 181, 135, 0.68) 100%
+  );
+  box-shadow:
+    -1px 4px 6.6px 0px #ffefbb,
+    1px -2px 1px 2px #eac991 inset,
+    2px -3px 0px 2px #ffefbb inset;
+}
+.icon {
+  transform: translateY(-2px);
+}

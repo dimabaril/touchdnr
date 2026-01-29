@@ -2,14 +2,13 @@
 
 import HomeButton from "./HomeButton";
 import { usePathname } from "next/navigation";
+import styles from "./Footer.module.css";
 
 export default function Footer() {
   const pathname = usePathname();
-  // "/" — это главная страница
   if (pathname === "/") return null;
-
   return (
-    <footer className="absolute bottom-[52px] right-[52px]">
+    <footer className={styles.footer}>
       <HomeButton />
     </footer>
   );

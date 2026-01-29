@@ -1,0 +1,73 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 10px;
+  width: 394px;
+  padding: 10px;
+  border-radius: 25px;
+  background: #ffffff33;
+  box-shadow:
+    0px 13px 23.5px 0px #00000026,
+    0px 40px 67.6px 0px #00000045;
+  backdrop-filter: blur(8px);
+}
+.cardImage {
+  border-radius: 20px;
+}
+.cardContent {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 10px;
+}
+.cardLabel {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  font-family: var(--font-actay);
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: -2.3%;
+}
+.cardIndex {
+  flex-shrink: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: #ffffff99;
+  color: #737373;
+  text-shadow: 0px 0px 23.2px 0px #0000001a;
+}
+.cardLabelText {
+  color: #636363;
+  text-shadow: 0px 0px 16.8px 0px #0000003d;
+}
+.cardText {
+  background: #9d9d9d8a;
+  border-radius: 20px;
+  padding: 25px 15px 30px 20px;
+  font-family: var(--font-sans);
+  font-weight: bold;
+  color: #fff;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 3%;
+}
+.cardDeadline {
+  align-self: flex-end;
+  padding: 15px 25px;
+  background: #ffffff99;
+  border-radius: 9999px;
+  box-shadow: 2px -2px 0px 1px #ffffff85 inset;
+  color: #737373;
+  text-shadow: 0px 0px 23.2px 0px #0000001a;
+  font-family: var(--font-actay);
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 1.5;
+}

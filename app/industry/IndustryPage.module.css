@@ -1,0 +1,32 @@
+.main {
+  padding: 187px 81px 81px 81px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.infoBlock {
+  background: rgba(157, 157, 157, 0.3);
+  backdrop-filter: blur(2px);
+  right: 138px;
+  bottom: 91px;
+  padding: 25px 0px;
+  position: absolute;
+  width: 750px;
+  border-radius: 25px;
+}
+.infoList {
+  border-radius: 20px;
+  width: 530px;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: var(--font-sans);
+  font-weight: 500;
+  font-size: 18px;
+  color: #fff;
+  background: rgba(157, 157, 157, 0.3);
+  list-style: disc;
+  padding: 30px 25px 40px 50px;
+  line-height: 150%;
+  letter-spacing: 0.54px;
+  text-shadow: 0px 0px 23.2px #0000001a;
+}

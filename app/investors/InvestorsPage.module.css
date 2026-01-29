@@ -1,0 +1,8 @@
+.main {
+  padding-top: 246px;
+}
+.steps {
+  height: 587px;
+  display: flex;
+  gap: 25px;
+}

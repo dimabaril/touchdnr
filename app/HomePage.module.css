@@ -1,0 +1,54 @@
+.main {
+  display: flex;
+  flex-direction: column;
+}
+.sloganBlock {
+  position: absolute;
+  top: 190px;
+  left: 53px;
+}
+.sloganImage {
+  filter: drop-shadow(0px 10px 16.9px rgba(0, 0, 0, 0.25));
+}
+.logo {
+  position: absolute;
+  z-index: 10;
+  top: 34px;
+  left: 546px;
+}
+.infoBlock {
+  position: absolute;
+  width: 650px;
+  right: 52px;
+  bottom: 246px;
+  padding: 25px 0px;
+  border-radius: 25px;
+  background: rgba(157, 157, 157, 0.3);
+  backdrop-filter: blur(2px);
+}
+.infoList {
+  border-radius: 20px;
+  width: 430px;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: var(--font-sans);
+  font-weight: 500;
+  font-size: 18px;
+  color: #fff;
+  background: rgba(157, 157, 157, 0.3);
+  list-style: disc;
+  padding: 30px 25px 40px 50px;
+  line-height: 150%;
+  letter-spacing: 0.54px;
+  text-shadow: 0px 0px 23.2px #0000001a;
+}
+
+.nav {
+  position: absolute;
+  width: 1446px;
+  bottom: 98px;
+  display: flex;
+  justify-content: space-between;
+  left: 50%;
+  transform: translateX(-50%);
+}

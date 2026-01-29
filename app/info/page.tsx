@@ -1,14 +1,10 @@
-import Link from "next/link";
+import styles from "./InfoPage.module.css";
 
 export default function InfoPage() {
   return (
-    <main className="min-h-screen flex flex-col items-center justify-center">
-      <h1 className="font-actay font-bold text-[48px] text-[#8B8B8B] mb-8">
-        Информация о регионе
-      </h1>
-      <p className="font-sans text-[24px] text-[#8B8B8B] mb-12">
-        Страница в разработке
-      </p>
+    <main className={styles.main}>
+      <h1 className={styles.title}>Информация о регионе</h1>
+      <p className={styles.text}>Страница в разработке</p>
     </main>
   );
 }

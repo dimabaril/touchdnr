@@ -1,0 +1,23 @@
+.item {
+  padding: 20px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-family: var(--font-actay);
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 120%;
+  letter-spacing: 2%;
+  color: #fff;
+  background: rgba(157, 157, 157, 0.3);
+}
+.itemActive {
+  background: linear-gradient(
+    88.32deg,
+    rgba(233, 85, 48, 0.68) -9.14%,
+    rgba(191, 68, 65, 0.68) 81.87%
+  );
+  box-shadow:
+    -1px 4px 13.3px 0px rgba(163, 0, 0, 0.5),
+    1px -2px 1px 1px rgba(205, 4, 4, 0.58) inset,
+    2px -3px 0px 1px rgba(255, 187, 187, 0.5) inset;
+}
