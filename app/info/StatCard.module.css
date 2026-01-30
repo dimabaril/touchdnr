@@ -1,0 +1,83 @@
+.container {
+  display: flex;
+  flex-grow: 1;
+  width: 286;
+  height: 212;
+  border-radius: 25px;
+  gap: 10px;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow:
+    0px 13px 23.5px 0px rgba(0, 0, 0, 0.15),
+    0px 53px 67.6px 0px rgba(0, 0, 0, 0.2);
+
+  /* need to check */
+  backdrop-filter: blur(2px);
+
+  .innerContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 20px;
+    padding: 15px 15px 20px 15px;
+    background: rgba(157, 157, 157, 0.3);
+    background-blend-mode: multiply;
+
+    /* need to check */
+    backdrop-filter: blur(2px);
+  }
+}
+.title {
+  /* if we need it */
+  /* white-space: nowrap; */
+
+  border-radius: 20px;
+  padding: 10px 20px;
+  gap: 10px;
+  background: rgba(255, 255, 255, 0.6);
+  box-shadow: 2px -2px 0px 1px rgba(255, 255, 255, 0.52) inset;
+
+  font-family: var(--font-actay);
+  font-weight: bold;
+  font-style: normal;
+  font-size: 15px;
+  line-height: 150%;
+  letter-spacing: 0;
+
+  color: rgba(115, 115, 115, 1);
+  text-shadow: 0px 0px 23.2px 0px rgba(0, 0, 0, 0.1);
+}
+.value {
+  font-family: var(--font-actay);
+  font-weight: 400;
+  font-style: normal;
+  font-size: 35px;
+  line-height: 120%;
+  letter-spacing: -2.3%;
+
+  span {
+    font-family: var(--font-actay);
+    font-weight: 700;
+    font-style: normal;
+    font-size: 20px;
+    line-height: 120%;
+    letter-spacing: -2.3%;
+  }
+
+  color: rgba(255, 255, 255, 1);
+  text-shadow: 0px 0px 7.2px 0px rgba(0, 0, 0, 0.2);
+}
+
+.hint {
+  mix-blend-mode: Lighten;
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 100%;
+  letter-spacing: 3%;
+
+  color: rgba(255, 255, 255, 1);
+
+  text-shadow: 0px 0px 23.2px 0px rgba(0, 0, 0, 0.1);
+}
