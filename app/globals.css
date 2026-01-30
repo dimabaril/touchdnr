@@ -48,6 +48,10 @@ body {
   font-family: var(--font-pt-root), sans-serif;
 }
 
+.bg-info-page {
+  background: url("/images/backgroundInfo.png") center / cover no-repeat;
+}
+
 .glass-effect {
   background: linear-gradient(
     180deg,

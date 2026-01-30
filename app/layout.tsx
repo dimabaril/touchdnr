@@ -3,6 +3,7 @@ import localFont from "next/font/local";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import BodyClassSetter from "@/components/BodyClassSetter";
 
 const ptRootUi = localFont({
   src: [
@@ -81,6 +82,7 @@ export default function RootLayout({
       <body
         className={`${ptRootUi.variable} ${actay.variable} antialiased relative`}
       >
+        <BodyClassSetter />
         <Header />
         {children}
         <Footer />
