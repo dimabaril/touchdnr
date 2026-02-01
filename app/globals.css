@@ -54,6 +54,8 @@ body {
 }
 
 .os-scrollbar {
+  bottom: 50px;
+
   margin: auto;
   width: 736px;
   height: 36px;
