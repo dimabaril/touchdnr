@@ -1,6 +1,9 @@
+"use client";
+
 import styles from "./InvestorsPage.module.css";
 
 import StepCard, { StepCardProps } from "./StepCard";
+import { OverlayScrollbarsComponent } from "overlayscrollbars-react";
 
 export default function InvestorsPage() {
   const steps: StepCardProps[] = [
@@ -66,11 +69,13 @@ export default function InvestorsPage() {
 
   return (
     <main className={styles.main}>
-      <div className={styles.steps}>
-        {steps.map((step, i) => (
-          <StepCard key={i} {...step} index={i} />
-        ))}
-      </div>
+      <OverlayScrollbarsComponent>
+        <div className={styles.steps}>
+          {steps.map((step, i) => (
+            <StepCard key={i} {...step} index={i} />
+          ))}
+        </div>
+      </OverlayScrollbarsComponent>
     </main>
   );
 }

@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@import "overlayscrollbars/overlayscrollbars.css";
 
 @theme {
   --font-sans: var(--font-pt-root);
@@ -52,11 +53,34 @@ body {
   background: url("/images/backgroundInfo.png") center / cover no-repeat;
 }
 
-.glass-effect {
-  background: linear-gradient(
-    180deg,
-    #4e4e4e80 2%,
-    #85858580 40%,
-    #afafaf80 100%
+.os-scrollbar {
+  margin: auto;
+  width: 736px;
+  height: 36px;
+  padding: 8px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.5);
+  box-shadow: 0px 13px 23.5px 0px rgba(0, 0, 0, 0.15);
+}
+
+.os-scrollbar-track,
+.os-scrollbar-track:hover {
+  background: rgba(157, 157, 157, 0.54);
+  border-radius: 10px;
+}
+
+.os-scrollbar-handle,
+.os-scrollbar-handle:hover {
+  background: rgba(239, 172, 117, 0.68);
+
+  border: 1px solid;
+  border-image-source: linear-gradient(
+    269.53deg,
+    rgba(255, 255, 255, 0.9) 6.2%,
+    rgba(85, 85, 85, 0.9) 93.8%
   );
+
+  box-shadow: -1px 4px 6.6px 0px rgba(218, 193, 156, 1);
+  box-shadow: 2px -2px 0px 1px rgba(255, 239, 187, 1) inset;
+  box-shadow: 1px -1px 1px 1px rgba(234, 201, 145, 1) inset;
 }
