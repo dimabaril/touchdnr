@@ -70,10 +70,12 @@ export default function InvestorsPage() {
   return (
     <main className={styles.main}>
       <OverlayScrollbarsComponent>
-        <div className={styles.steps}>
-          {steps.map((step, i) => (
-            <StepCard key={i} {...step} index={i} />
-          ))}
+        <div className="h-[688px]">
+          <div className={styles.steps}>
+            {steps.map((step, i) => (
+              <StepCard key={i} {...step} index={i} />
+            ))}
+          </div>
         </div>
       </OverlayScrollbarsComponent>
     </main>
