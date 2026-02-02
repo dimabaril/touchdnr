@@ -53,6 +53,12 @@ body {
   background: url("/images/backgroundInfo.png") center / cover no-repeat;
 }
 
+/* scrollbar */
+/* *:has(.os-scrollbar) {
+  padding-left: 209px;
+  padding-bottom: 153px;
+} */
+
 .os-scrollbar {
   bottom: 50px;
 
@@ -88,3 +94,4 @@ body {
   box-shadow: 2px -2px 0px 1px rgba(255, 239, 187, 1) inset;
   box-shadow: 1px -1px 1px 1px rgba(234, 201, 145, 1) inset;
 }
+/* scrollbar */
